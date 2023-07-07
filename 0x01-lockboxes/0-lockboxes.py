@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-"""Module containing the canUnlockAll function"""
+"""This module defines a function canUnlockAll that takes a list of lists representing boxes and determines if all the boxes can be opened."""
 
+from typing import List
 
-def canUnlockAll(boxes):
+def canUnlockAll(boxes: List[List[int]]) -> bool:
     """
     Determines if all the boxes can be opened.
 
+    This function takes a list of lists, where each inner list represents a box and contains the keys to other boxes.
+    The function returns True if all boxes can be opened, and False otherwise.
+
     Args:
-        boxes (List[List[int]]): A list of lists, where each inner list represents a box and contains the keys to other boxes.
+        boxes: A list of lists, where each inner list represents a box and contains the keys to other boxes.
 
     Returns:
-        bool: True if all boxes can be opened, False otherwise.
+        A boolean value indicating whether all boxes can be opened or not.
     """
     keys = [0]
     opened = [False] * len(boxes)
@@ -22,4 +26,3 @@ def canUnlockAll(boxes):
                 opened[key] = True
                 keys.append(key)
     return all(opened)
-
