@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains a function that checks if data is a vaif utf 8 encoding"""
 
+
 def validUTF8(data):
     """
     Determines if a given data set represents a valid UTF-8 encoding.
@@ -14,7 +15,8 @@ def validUTF8(data):
         bin_rep = format(num, '#010b')[-8:]
         if n_bytes == 0:
             for bit in bin_rep:
-                if bit == '0': break
+                if bit == '0':
+                    break
                 n_bytes += 1
             if n_bytes == 0:
                 continue
@@ -25,4 +27,3 @@ def validUTF8(data):
                 return False
         n_bytes -= 1
     return n_bytes == 0
-
