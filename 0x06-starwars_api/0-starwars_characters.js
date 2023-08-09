@@ -25,4 +25,3 @@ async function main () {
 
 // Call the main function to run the script
 main();
-
