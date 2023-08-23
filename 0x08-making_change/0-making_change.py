@@ -10,7 +10,8 @@ def makeChange(coins, total):
     :type coins: List[int]
     :param total: Total amount to meet
     :type total: int
-    :return: Fewest number of coins needed to meet total. If total is 0 or less,
+    :return: Fewest number of coins needed to meet total. If total is 0 or
+             less,
              return 0. If total cannot be met by any number of coins you have,
              return -1.
     :rtype: int
