@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Primegame Module"""
+
 def isWinner(x, nums):
     """
     Determines the winner of a prime game played x rounds.
